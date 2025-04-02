@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url(./images/pattern-background-desktop.svg);
+  min-height: 100vh;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  background-color: hsl(225, 100%, 98%);
+  width: 90%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.product__content {
+  padding: 2.5rem 1rem;
+}
+.product__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.product__header {
+  text-align: center;
+  margin-block: 1rem;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: hsl(223, 47%, 23%);
+}
+.product__description {
+  color: hsl(224, 23%, 55%);
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.product__price {
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: hsl(225, 100%, 99%);
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.product__price--price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.product__price-header {
+  color: hsl(223, 47%, 23%);
+  font-weight: 800;
+}
+.product__price-text {
+  color: hsl(224, 23%, 55%);
+}
+.product__price-option {
+  color: hsl(245, 75%, 52%);
+  font-weight: 600;
+}
+.product__btn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-block: 1rem;
+  border: none;
+  padding-block: 1rem;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 4px 10px 20px hsl(228, 45%, 44%);
+  transition: background 0.4s ease;
+}
+.product__btn:hover {
+  background-color: hsl(223, 47%, 23%);
+}
+.product__btn--cancel {
+  display: block;
+  font-weight: 600;
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block-start: 3rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 60rem) {
+  body {
+    background: url(./images/pattern-background-desktop.svg);
+  }
+}/*# sourceMappingURL=main.css.map */

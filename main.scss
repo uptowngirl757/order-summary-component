@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin flexLayout($direction: column, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url(./images/pattern-background-desktop.svg);
+  min-height: 100vh;
+  margin: 3rem auto 0 auto;
+
+  @include flexLayout;
+}
+.product {
+  background-color: hsl(225, 100%, 98%);
+  width: 90%;
+  max-width: 360px;
+  @include flexLayout;
+  border-radius: 20px;
+
+  &__content {
+    padding: 2.5rem 1rem;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  &__header {
+    text-align: center;
+    margin-block: 1rem;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: hsl(223, 47%, 23%);
+  }
+  &__description {
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  &__price {
+    margin-block: 1rem;
+    padding: 1rem;
+    background-color: hsl(225, 100%, 99%);
+    border-radius: 0.7rem;
+    @include flexLayout(row, space-between);
+
+    &--price {
+      @include flexLayout;
+      gap: 0.5rem;
+    }
+    &-header {
+      color: hsl(223, 47%, 23%);
+      font-weight: 800;
+    }
+    &-text {
+      color: hsl(224, 23%, 55%);
+    }
+    &-option {
+      color: hsl(245, 75%, 52%);
+      font-weight: 600;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-block: 1rem;
+    border: none;
+    padding-block: 1rem;
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 4px 10px 20px hsl(228, 45%, 44%);
+    transition: background 0.4s ease;
+    &:hover {
+      background-color: hsl(223, 47%, 23%);
+    }
+  }
+  &__btn--cancel {
+    display: block;
+    font-weight: 600;
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+    text-align: center;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block-start: 3rem;
+  a {
+    color: hsl(228, 45%, 44%);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+@media (min-width: 60rem) {
+  body {
+    background: url(./images/pattern-background-desktop.svg);
+  }
+}
