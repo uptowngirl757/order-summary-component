@@ -71,6 +71,10 @@ body {
     &-option {
       color: hsl(245, 75%, 52%);
       font-weight: 600;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   &__btn {
@@ -88,15 +92,21 @@ body {
     box-shadow: 4px 10px 20px hsl(228, 45%, 44%);
     transition: background 0.4s ease;
     &:hover {
-      background-color: hsl(223, 47%, 23%);
+      background-color: hsl(228, 45%, 44%);
     }
   }
   &__btn--cancel {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     color: hsl(224, 23%, 55%);
     text-decoration: none;
     text-align: center;
+    margin-block-start: 0.9rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: hsl(223, 47%, 23%);
+    }
   }
 }
 .attribution {
@@ -111,8 +121,8 @@ body {
     }
   }
 }
-@media (min-width: 60rem) {
+@media (max-width: 60rem) {
   body {
-    background: url(./images/pattern-background-desktop.svg);
+    background: url(./images/pattern-background-.svg);
   }
 }
